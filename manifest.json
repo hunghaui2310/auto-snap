@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Auto snap",
+    "description": "Add the reading time to Chrome Extension documentation articles",
+    "background": {
+        "service_worker": "service-worker.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://app.spline.design/*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "images/hungnn.png"
+    },
+    "icons": {
+        "16": "images/hungnn.png",
+        "32": "images/hungnn.png",
+        "48": "images/hungnn.png",
+        "128": "images/hungnn.png"
+    },
+    "permissions": [
+        "scripting",
+        "webNavigation",
+        "activeTab",
+        "storage"
+    ]
+}
