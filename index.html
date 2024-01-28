@@ -11,39 +11,47 @@
 </head>
 
 <body>
-  <h1>Auto snap</h1>
+  <h1 id="hoverText">Auto snap</h1>
   <form>
     <div class="form">
       <label>
-        <span>X-Axis 1</span>
-        <input type="text" name="x-axis" value="" />
+        <span>X-Axis</span>
+        <input type="text" name="xAxis1" id="xAxis" value="0" />
       </label>
       <label>
-        <span>Y-Axis 1</span>
-        <input type="text" name="y-axis" value="" />
+        <span>Y-Axis</span>
+        <input type="text" name="yAxis1" id="yAxis" value="0" />
       </label>
       <label>
-        <span>Z-Axis 1</span>
-        <input type="text" name="z-axis" value="" />
+        <span>Z-Axis</span>
+        <input type="text" name="zAxis1" id="zAxis" value="0" />
       </label>
     </div>
     <div class="form">
       <label>
-        <span>X-Axis 2</span>
-        <input type="text" name="x-axis" value="" />
+        <span>Scale X</span>
+        <input type="text" name="xAxis2" id="xScale" value="1" />
       </label>
       <label>
-        <span>Y-Axis 2</span>
-        <input type="text" name="y-axis" value="" />
+        <span>Scale Y</span>
+        <input type="text" name="yAxis2" id="yScale" value="1" />
       </label>
       <label>
-        <span>Z-Axis 2</span>
-        <input type="text" name="z-axis" value="" />
+        <span>Scale Z</span>
+        <input type="text" name="zAxis2" id="zScale" value="1" />
       </label>
     </div>
   </form>
+  <div>
+    <button id="snapX">Snap X</button>
+    <button id="snapY">Snap Y</button>
+    <button id="snapZ">Snap Z</button>
+    <button id="snapXY">Snap XY</button>
+    <button id="snapYZ">Snap YZ</button>
+    <button id="snapXZ">Snap XZ</button>
+  </div>
   <p class="hint">
-    Note: Make sure you request the required
+    Your result: 
     <code>host_permissions</code> in the manifest.
   </p>
 </body>

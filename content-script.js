@@ -17,11 +17,11 @@
             // }).catch(function(err) {
             //     console.error('Failed to read clipboard data:', err);
             // });
-
+            
             var request = indexedDB.open('keyval-store');
-request.onerror = function(event) {
-    console.error('IndexedDB error:', event.target.errorCode);
-  };
+            request.onerror = function(event) {
+                console.error('IndexedDB error:', event.target.errorCode);
+            };
 
             request.onsuccess = function(event) {
                 var db = event.target.result;
@@ -31,8 +31,9 @@ request.onerror = function(event) {
                 // Now that you have access to the database, you can retrieve data from it
                 getRequest.onsuccess = function(event) {
                     var data = event.target.result;
-                    console.log('Retrieved data:', data);
-                    
+                    chrome.runtime.sendMessage(data);
+                    // var port = chrome.runtime.connect({name: "knockknock"});
+                    // port.postMessage({data: data});
                   };
               };
         });

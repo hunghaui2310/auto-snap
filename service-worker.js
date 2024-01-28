@@ -31,3 +31,17 @@
 //     });
 //   }
 // });
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    // Handle the received message
+    console.log("Received message:", message);
+    // Do whatever you want with the received data
+});
+
+// chrome.runtime.onConnect.addListener(function (port) {
+//     console.log(port.name);
+//     port.onMessage.addListener(function (msg) {
+//         console.log('ms = ', msg)
+//     });
+// });
+
